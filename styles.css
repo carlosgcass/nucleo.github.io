@@ -1,0 +1,561 @@
+:root {
+  --verde: #496b5a;
+  --verde-oscuro: #30483c;
+  --crema: #f7f1e7;
+  --arena: #e7dac7;
+  --terracota: #b9785f;
+  --blanco: #ffffff;
+  --texto: #344039;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: Georgia, serif;
+  color: var(--texto);
+  background: var(--crema);
+  line-height: 1.6;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8%;
+
+  background: var(--crema);
+}
+
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--verde);
+}
+
+
+.logo span {
+  margin-right: 8px;
+}
+
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+
+nav a {
+  color: var(--texto);
+  text-decoration: none;
+}
+
+
+nav a:hover {
+  color: var(--terracota);
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 80px 10%;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      #d9c8ad 0,
+      transparent 35%
+    ),
+    var(--crema);
+}
+
+
+.hero-content {
+  max-width: 650px;
+}
+
+
+.eyebrow {
+  color: var(--terracota);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
+  margin: 20px 0;
+  color: var(--verde-oscuro);
+}
+
+
+.hero h1 span {
+  display: block;
+  color: var(--terracota);
+}
+
+
+.hero-text {
+  max-width: 550px;
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+}
+
+
+.hero-symbol {
+  width: 280px;
+  height: 280px;
+
+  border: 1px solid var(--arena);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 6rem;
+
+  color: var(--terracota);
+
+  background: rgba(255,255,255,0.25);
+}
+
+
+/* BOTONES */
+
+.btn {
+  display: inline-block;
+
+  border: none;
+  border-radius: 30px;
+
+  padding: 14px 28px;
+
+  background: var(--verde);
+  color: white;
+
+  text-decoration: none;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.btn:hover {
+  background: var(--verde-oscuro);
+  transform: translateY(-2px);
+}
+
+
+/* BENEFICIOS */
+
+.beneficios {
+  padding: 100px 10%;
+  background: white;
+}
+
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+.section-title h2,
+.curso h2,
+.registro h2 {
+  font-size: 2.8rem;
+  color: var(--verde-oscuro);
+}
+
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+.beneficio {
+  text-align: center;
+  padding: 40px 25px;
+}
+
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+
+.beneficio h3 {
+  color: var(--verde);
+  margin-bottom: 10px;
+}
+
+
+/* CURSO */
+
+.curso {
+  padding: 100px 10%;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
+
+  background: var(--arena);
+}
+
+
+.curso-info h2 {
+  margin: 15px 0;
+}
+
+
+.curso-info p {
+  max-width: 650px;
+  margin-bottom: 25px;
+}
+
+
+.curso-info ul {
+  list-style: none;
+}
+
+
+.curso-info li {
+  margin: 10px 0;
+}
+
+
+.curso-card {
+  background: var(--crema);
+  padding: 40px;
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+
+.curso-card span {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--terracota);
+}
+
+
+.curso-card h3 {
+  font-size: 2rem;
+  margin: 15px 0;
+}
+
+
+.curso-card strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--verde);
+  margin-top: 20px;
+}
+
+
+/* REGISTRO */
+
+.registro {
+  padding: 100px 10%;
+  background: var(--verde-oscuro);
+  color: white;
+}
+
+
+.registro-container {
+  max-width: 1000px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+.registro h2 {
+  color: white;
+  margin: 15px 0;
+}
+
+
+.registro-info p:last-child {
+  color: #dce5df;
+}
+
+
+form {
+  background: var(--crema);
+  color: var(--texto);
+
+  padding: 35px;
+
+  border-radius: 20px;
+}
+
+
+.campo {
+  margin-bottom: 20px;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+
+input,
+select {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid var(--arena);
+  border-radius: 8px;
+
+  background: white;
+
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--terracota);
+}
+
+
+form .btn {
+  width: 100%;
+}
+
+
+/* RESULTADO */
+
+.resultado {
+  padding: 100px 20px;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #e9ddca,
+      var(--crema)
+    );
+}
+
+
+.ficha {
+  max-width: 700px;
+  width: 100%;
+
+  background: white;
+
+  border-radius: 25px;
+
+  padding: 50px;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+
+  text-align: center;
+}
+
+
+.ficha-header {
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--arena);
+}
+
+
+.ficha-header > span {
+  color: var(--terracota);
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+}
+
+
+.ficha-header h2 {
+  color: var(--verde-oscuro);
+  font-size: 2.3rem;
+  margin: 15px 0;
+}
+
+
+.ficha-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  padding: 30px 0;
+}
+
+
+.ficha-content div {
+  padding: 20px;
+
+  background: var(--crema);
+
+  border-radius: 12px;
+}
+
+
+.ficha-content small {
+  display: block;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+
+.ficha-content strong {
+  color: var(--verde);
+}
+
+
+.curso-detalle {
+  text-align: left;
+  background: #f9f6f0;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+
+.curso-detalle h3 {
+  color: var(--verde-oscuro);
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+
+.mensaje {
+  font-style: italic;
+  color: var(--terracota);
+  font-size: 1.2rem;
+
+  margin-bottom: 30px;
+}
+
+
+/* UTILIDADES */
+
+.oculto {
+  display: none;
+}
+
+
+/* FOOTER */
+
+footer {
+  padding: 30px;
+
+  text-align: center;
+
+  background: var(--verde-oscuro);
+
+  color: #dce5df;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  nav {
+    display: none;
+  }
+
+
+  .hero {
+    text-align: center;
+    padding: 70px 7%;
+    flex-direction: column;
+  }
+
+
+  .hero-symbol {
+    width: 180px;
+    height: 180px;
+    font-size: 4rem;
+    margin-top: 50px;
+  }
+
+
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .curso {
+    grid-template-columns: 1fr;
+    padding: 70px 7%;
+    gap: 40px;
+  }
+
+
+  .registro-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+
+  .ficha {
+    padding: 30px 20px;
+  }
+
+
+  .ficha-content {
+    grid-template-columns: 1fr;
+  }
+
+}
